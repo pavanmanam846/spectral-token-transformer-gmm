@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#164e63"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+  <circle cx="1000" cy="90" r="180" fill="url(#glow)"/>
+
+  <!-- seismic waveform backdrop -->
+  <path d="M0,240 Q40,200 80,240 T160,240 T240,180 T320,240 T400,150 T480,240 T560,200 T640,240 T720,120 T800,240 T880,200 T960,240 T1040,170 T1120,240 T1200,240"
+        fill="none" stroke="#0e7490" stroke-width="2" opacity="0.5"/>
+
+  <!-- spectral tokens: sequence of period nodes connected by attention lines -->
+  <g stroke="#f97316" stroke-width="1.2" opacity="0.55">
+    <line x1="180" y1="120" x2="360" y2="90"/>
+    <line x1="180" y1="120" x2="540" y2="140"/>
+    <line x1="360" y1="90" x2="720" y2="110"/>
+    <line x1="360" y1="90" x2="900" y2="80"/>
+    <line x1="540" y1="140" x2="900" y2="80"/>
+    <line x1="720" y1="110" x2="1080" y2="130"/>
+    <line x1="900" y1="80" x2="1080" y2="130"/>
+  </g>
+
+  <g fill="#22d3ee" stroke="#0f172a" stroke-width="2">
+    <circle cx="180" cy="120" r="9"/>
+    <circle cx="360" cy="90" r="9"/>
+    <circle cx="540" cy="140" r="9"/>
+    <circle cx="720" cy="110" r="9"/>
+    <circle cx="900" cy="80" r="9"/>
+    <circle cx="1080" cy="130" r="9"/>
+  </g>
+
+  <!-- response spectrum curve -->
+  <path d="M100,260 C250,150 400,80 600,70 C800,60 950,110 1120,180"
+        fill="none" stroke="url(#wave)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- title block -->
+  <text x="60" y="60" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#f8fafc">STT-GMM</text>
+  <text x="60" y="92" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#94e6f7">Spectral-Token Transformer Ground Motion Model</text>
+
+  <text x="60" y="285" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#5eead4" letter-spacing="1">PERIOD-WISE ATTENTION · NGA-WEST2 · RESPONSE SPECTRUM PREDICTION</text>
+</svg>
